@@ -1,0 +1,36 @@
+<!-- new-index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SolarTask Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="todo-shell">
+        <div class="heading">SolarTask Manager</div>
+        <div class="task-input-wrap">
+            <input class="task-field" type="text" id="newTaskText" maxlength="80" placeholder="What needs to be accomplished?">
+            <button class="add-action" id="addAction">＋</button>
+        </div>
+        <div id="filter-bar">
+            <button class="filter-action active" data-mode="all">All</button>
+            <button class="filter-action" data-mode="open">Active</button>
+            <button class="filter-action" data-mode="done">Done</button>
+            <button class="add-action" id="batchRemoveDone" style="background:var(--danger);color:var(--bg-main);margin-left:auto;">Clear done</button>
+        </div>
+        <ul id="todo-items"></ul>
+        <div class="note" id="mainNote"></div>
+    </div>
+    <div id="edit-modal">
+        <div id="modal-content">
+            <input type="text" id="modal-edit-input" maxlength="80" value="">
+            <div class="mod-controls">
+                <button id="saveEditModal">Save</button>
+                <button class="cancel" id="cancelEditModal">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
